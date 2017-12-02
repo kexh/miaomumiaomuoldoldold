@@ -4,8 +4,8 @@
 '''
 
 import json
-import p_conf
-from base.rbtRequests import RbtRequests
+import qq_process_conf
+from base.req_op import RbtRequests
 rbt_requests = RbtRequests()
 
 class RecMsg():
@@ -22,8 +22,8 @@ class RecMsg():
         }
         data = {'r': json.dumps(req)}
         resp = rbt_requests.post(
-            url = p_conf.URL_REC,
-            refer = p_conf.REFER_REC,
+            url = qq_process_conf.URL_REC,
+            refer = qq_process_conf.REFER_REC,
             cookies = self.cookies,
             data = data,
             timeout = self.timeout

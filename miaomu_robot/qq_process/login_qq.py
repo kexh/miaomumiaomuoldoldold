@@ -6,13 +6,13 @@ import os
 import time
 import json
 import pickle
-import p_conf
+import qq_process_conf
 from PIL import Image
 try:
     from StringIO import StringIO
 except ImportError:
     from io import StringIO
-from base.rbtRequests import RbtRequests
+from base.req_op import RbtRequests
 from base.read_n_write import (read_cookies, write_cookies)
 rbt_requests = RbtRequests()
 
@@ -69,8 +69,8 @@ class Login():
                't': 0.1
             }
             resp = rbt_requests.get(
-                url = p_conf.GET_ONLINE,
-                refer = p_conf.REFERER_OL,
+                url = qq_process_conf.GET_ONLINE,
+                refer = qq_process_conf.REFERER_OL,
                 cookies = self.cookies,
                 params = payload,
                 timeout = self.timeout
@@ -94,7 +94,7 @@ class Login():
                    't': 0.1}
 
         resp = rbt_requests.get(
-            url = p_conf.GET_QR,
+            url = qq_process_conf.GET_QR,
             refer = '',
             params = payload,
             cookies = self.cookies,
@@ -129,8 +129,8 @@ class Login():
         while 1:
             time.sleep(2)
             resp = rbt_requests.get(
-                url = p_conf.SCAN_STATE,
-                refer = p_conf.SCAN_STATE_REFERER,
+                url = qq_process_conf.SCAN_STATE,
+                refer = qq_process_conf.SCAN_STATE_REFERER,
                 cookies = self.cookies,
                 params = payload,
                 timeout = self.timeout
@@ -156,7 +156,7 @@ class Login():
     def fetchCookiePT(self, addr):
         resp = rbt_requests.get(
             url = addr,
-            refer = p_conf.REFERER_PT,
+            refer = qq_process_conf.REFERER_PT,
             cookies = self.cookies,
             timeout = self.timeout
         )
@@ -180,8 +180,8 @@ class Login():
             't': 0.1
         }
         resp = rbt_requests.get(
-            url = p_conf.FETCH_VF,
-            refer = p_conf.REFERER_VF,
+            url = qq_process_conf.FETCH_VF,
+            refer = qq_process_conf.REFERER_VF,
             params = payload,
             cookies = self.cookies,
             timeout = self.timeout
@@ -200,8 +200,8 @@ class Login():
                'status': 'online'}
         data = {'r': json.dumps(req)}
         resp = rbt_requests.post(
-            url = p_conf.FETCH_PN,
-            refer = p_conf.REFERER_PN,
+            url = qq_process_conf.FETCH_PN,
+            refer = qq_process_conf.REFERER_PN,
             cookies = self.cookies,
             data = data,
             timeout = self.timeout

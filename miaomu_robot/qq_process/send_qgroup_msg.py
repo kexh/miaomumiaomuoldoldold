@@ -3,8 +3,8 @@
     @author: miaomu(2017/01/08)
 '''
 import json
-import p_conf
-from base.rbtRequests import RbtRequests
+import qq_process_conf
+from base.req_op import RbtRequests
 rbt_requests = RbtRequests()
 
 class SendMsg():
@@ -39,8 +39,8 @@ class SendMsg():
         data = {'r': json.dumps(req)}
         print data
         resp = rbt_requests.post(
-            url = p_conf.URL_SEND,
-            refer = p_conf.REFER_SEND,
+            url = qq_process_conf.URL_SEND,
+            refer = qq_process_conf.REFER_SEND,
             cookies = self.cookies,
             data = data,
             timeout = self.timeout
