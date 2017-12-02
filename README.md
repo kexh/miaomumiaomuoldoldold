@@ -3,7 +3,7 @@
 
 developing...
 
-**1.** set "miaomu_robot" as sources root.
+**1.** set "miaomumiaomuoldoldold" dir as sources root.
 **2.** run "miaomumiaomuoldoldold.py".
 
 
