@@ -17,8 +17,8 @@ from base.read_n_write import (read_cookies, write_cookies)
 rbt_requests = RbtRequests()
 
 
-file_cookies = '../att/login_cookies.txt'
-img_tdc = '../att/tdc_' + str(time.time()) + '.jpeg'
+file_cookies = '../att_temp/login_cookies.txt'
+img_tdc = '../att_temp/tdc_' + str(time.time()) + '.jpeg'
 
 
 

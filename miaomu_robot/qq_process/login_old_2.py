@@ -9,9 +9,9 @@ from Crypto.Cipher import AES
 # from base import read_n_write
 from util import req_op# import RbtRequests
 rbt_requests = req_op.RbtRequests()
-file_cookies = '../att/necm_login_cookies.txt'
-file_html = '../att/necm_search_result.html'
-file_html_2 = '../att/necm_search_result_2.html'
+file_cookies = '../att_temp/necm_login_cookies.txt'
+file_html = '../att_temp/necm_search_result.html'
+file_html_2 = '../att_temp/necm_search_result_2.html'
 default_timeout = 10
 
 # def for_cookies():

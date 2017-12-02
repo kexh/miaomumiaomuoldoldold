@@ -1,7 +1,7 @@
-from nlp import nlp
-from qq_process.login_qq import Login
-from qq_process.rec_msg import RecMsg
-from qq_process.send_qgroup_msg import SendMsg
+from miaomu_robot.nlp import nlp
+from miaomu_robot.qq_process.login_qq import Login
+from miaomu_robot.qq_process.rec_msg import RecMsg
+from miaomu_robot.qq_process.send_qgroup_msg import SendMsg
 
 
 def group_chat():

@@ -5,7 +5,7 @@ from miaomu_robot import main as qq_robot
 [dir: miaomu_robot]login2group;....
 [dir: qq_process]api;conf; ...
 [dir: util]rbtRequests
-[dir: att] cookie; png; jsons_receive; json_send
+[dir: att_temp] cookie; png; jsons_receive; json_send
 '''
 
 
