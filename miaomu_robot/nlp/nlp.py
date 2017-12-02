@@ -9,9 +9,9 @@ from miaomu_robot.nlp.Feature_library.a_search import a_search
 根据关键字过滤结果不同,需要走不同的调取数据源的分支:
 1. Data_crawler: 直接调爬虫数据(包括实时和非实时的)得到答句的
 2. KB_library: 直接从本地知识库获取得到答句的
-3. Feature_library: 需要匹配es问句库答句库得到答句的(特征提取时包括了句式等特征)
+3. Feature_library: 需要匹配es问句库答句库得到答句的
 
-代码实现次序: 3 - 2 - 1.
+代码实现次序: 3(格式化存储入es的歌词库) - 2(批量拉下来的歌词库,在1and3用不了的时候备用) - 1(网易云或百度音乐等).
 '''
 
 
