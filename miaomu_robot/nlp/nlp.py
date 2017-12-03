@@ -3,6 +3,7 @@
 @author: miaomu
 @update: 2017/12/02
 '''
+from miaomu_robot.nlp.Feature_library.main import NlpFL
 from miaomu_robot.nlp.Feature_library.q_search import q_search
 from miaomu_robot.nlp.Feature_library.a_search import a_search
 '''
@@ -12,19 +13,25 @@ from miaomu_robot.nlp.Feature_library.a_search import a_search
 3. Feature_library: 需要匹配es问句库答句库得到答句的
 
 代码实现次序: 3(格式化存储入es的歌词库) - 2(批量拉下来的歌词库,在1and3用不了的时候备用) - 1(网易云或百度音乐等).
+* 3中的数据库数据and匹配规则和2中的文件数据不会同步到github。
 '''
 
-
-def nlp(sent_ori):
+def nlp_temp(sent_ori):
     if sent_ori != "":
         sent_ans = "123"
     else:
         sent_ans = "empty input..."
     return sent_ans
 
+def nlp_fl(sent_ori):
+    nfl = NlpFL(sent_ori)
+    nfl.parse()
+
+
+
 
 if __name__ == "__main__":
     sent_ori = raw_input("input a sentence for test: ")
-    print nlp(sent_ori)
+    print nlp_temp(sent_ori)
 
 
